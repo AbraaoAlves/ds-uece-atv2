@@ -11,6 +11,20 @@ package com.atv1.app;
  */
 public class Question1 {
     public static void main(String[] args) {
-      // TADPilha pilha = new Pilha(10);
+      TADPilha P = new Pilha(10);
+      
+      for(int i=0; i< 10;i++){
+        int val = (int) (Math.random()* 100)+1;
+        P.push(val);
+      }
+
+      System.out.println("Pilha normal: " + P.toString());
+
+      TADPilha Q = new Pilha(10);
+      while(!P.isEmpty()){
+        Q.push(P.pop());
+      }
+      
+      System.out.println("Pilha invertida: " + Q.toString());
     }
 }
