@@ -1,3 +1,11 @@
 {
-  "java.compile.nullAnalysis.mode": "automatic"
+  "java.compile.nullAnalysis.mode": "automatic",
+  "testing.saveBeforeTest": true,
+
+  "java.project.sourcePaths": ["app/src"],
+  "java.project.outputPath": "app/bin",
+  "java.project.referencedLibraries": [
+      "app/lib/**/*.jar"
+  ]
+
 }
