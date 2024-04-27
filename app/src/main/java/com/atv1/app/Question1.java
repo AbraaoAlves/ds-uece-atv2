@@ -1,5 +1,6 @@
 package com.atv1.app;
 
+import com.atv1.app.lib.*;
 
 /**
  * 
@@ -24,7 +25,7 @@ public class Question1 {
       while(!P.isEmpty()){
         Q.push(P.pop());
       }
-      
+
       System.out.println("Pilha invertida: " + Q.toString());
     }
 }

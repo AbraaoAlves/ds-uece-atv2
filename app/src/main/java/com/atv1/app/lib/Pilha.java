@@ -1,4 +1,4 @@
-package com.atv1.app;
+package com.atv1.app.lib;
 
 public class Pilha implements TADPilha {
 
