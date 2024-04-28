@@ -1,7 +1,7 @@
 package com.atv2.app.lib;
 
-public class Fila implements TADFila {
-  No<Integer> no;
+public class Fila<T> implements TADFila<T> {
+  No<T> no;
   int size;
 
   public Fila(int n) {
@@ -9,22 +9,22 @@ public class Fila implements TADFila {
     no = null;
   }
 
-  public void enqueue(int i) {
+  public void enqueue(T i) {
     if (no == null) {
-      no = new No();
+      no = new No<T>();
       no.set(0, i);
     } else {
       no.add(i);
     }
   }
 
-  public int dequeue() {
+  public T dequeue() {
     if (isEmpty()) {
       System.err.println("Fila vazia");
-      return -1;
+      return null;
     }
 
-    int result = no.getAtual();
+    T result = no.getAtual();
     no = no.proximo;
     return result;
   }

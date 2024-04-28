@@ -10,7 +10,7 @@ public class FilaTests {
   
   @Test
   void enqueue(){
-      Fila fila = new Fila(10);
+      Fila<Integer> fila = new Fila<Integer>(10);
 
       fila.enqueue(1);
       fila.enqueue(2);
@@ -20,7 +20,7 @@ public class FilaTests {
 
   @Test
   void dequeue(){
-      Fila fila = new Fila(10);
+      Fila<Integer> fila = new Fila<Integer>(10);
 
       fila.enqueue(1);
       fila.enqueue(2);
@@ -33,7 +33,7 @@ public class FilaTests {
 
   @Test
   void total(){
-      Fila fila = new Fila(10);
+      Fila<Integer> fila = new Fila<Integer>(10);
 
       fila.enqueue(1);
       fila.enqueue(2);
@@ -44,7 +44,7 @@ public class FilaTests {
 
   @Test
   void isEmpty(){
-      Fila fila = new Fila(10);
+      Fila<Integer> fila = new Fila<Integer>(10);
 
       assertEquals(true, fila.isEmpty());
 
@@ -57,7 +57,7 @@ public class FilaTests {
 
     @Test   
     void check_toString(){
-        Fila fila = new Fila(10);
+        Fila<Integer> fila = new Fila<Integer>(10);
 
         fila.enqueue(1);
         fila.enqueue(2);

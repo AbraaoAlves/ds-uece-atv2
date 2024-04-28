@@ -10,7 +10,7 @@ import com.atv2.app.lib.Pilha;
 public class Question4 {
   public static void main(String[] args) {
     Pilha<Integer> pilha = new Pilha<Integer>(10);
-    Fila fila = new Fila(10);
+    Fila<Integer> fila = new Fila<Integer>(10);
     
     for (int i = 0; i < 10; i++) {
       fila.enqueue(i);

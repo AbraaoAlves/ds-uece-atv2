@@ -1,10 +1,10 @@
 package com.atv2.app.lib;
 
-public interface TADFila {
+public interface TADFila<T> {
 
-  void enqueue(int i);
+  void enqueue(T i);
 
-  int dequeue();
+  T dequeue();
 
   int total();
 
