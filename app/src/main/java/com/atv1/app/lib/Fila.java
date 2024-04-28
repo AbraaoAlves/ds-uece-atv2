@@ -23,12 +23,12 @@ public class Fila implements TADFila {
       System.err.println("Fila vazia");
       return -1;
     }
-    
+
     int result = no.getAtual();
     no = no.proximo;
     return result;
   }
-  
+
   public int total() {
     return no != null ? no.size() : 0;
   }
@@ -41,4 +41,18 @@ public class Fila implements TADFila {
     return size == total();
   }
 
+  @Override
+  public String toString() {
+    if (no == null) {
+      return "";
+    }
+
+    String Ans = "";
+    int total = total();
+    for (int i = 0; i < total-1; i++) {
+      Ans += String.valueOf(no.get(i)) + "->";
+    }
+    Ans += String.valueOf(no.get(total-1));
+    return Ans;
+  }
 }

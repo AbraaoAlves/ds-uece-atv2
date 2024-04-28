@@ -54,4 +54,21 @@ public class FilaTests {
       fila.dequeue();
       assertEquals(true, fila.isEmpty());
   }
+
+    @Test   
+    void check_toString(){
+        Fila fila = new Fila(10);
+
+        fila.enqueue(1);
+        fila.enqueue(2);
+        fila.enqueue(3);
+        fila.enqueue(4);
+
+        assertEquals("1->2->3->4", fila.toString());
+
+        fila.dequeue();
+        fila.dequeue();
+
+        assertEquals("3->4", fila.toString());
+    }
 }
