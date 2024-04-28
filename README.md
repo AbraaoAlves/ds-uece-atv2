@@ -2,7 +2,7 @@
 
 You can run this java project using GithubCodeSpace, just clicking here:
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/AbraaoAlves/ds-uece-atv2)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?repo=AbraaoAlves/ds-uece-atv2)
 
 > thanks [containers.dev](https://containers.dev/templates) !
 
