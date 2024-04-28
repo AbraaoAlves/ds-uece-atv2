@@ -62,10 +62,10 @@ public class Pilha implements TADPilha {
     }  
 
     String Ans = "";
-      for (int i = 0; i < top; i++) {
-          Ans += String.valueOf(no.get(i)) + "->";
-      }
-      Ans += String.valueOf(no.get(top));
-      return Ans;
+    for (int i = top; i > 0; i--) {
+        Ans += String.valueOf(no.get(i)) + "->";
+    }
+    Ans += String.valueOf(no.getAtual());
+    return Ans;
   }
 }

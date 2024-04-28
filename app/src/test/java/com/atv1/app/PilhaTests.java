@@ -8,14 +8,14 @@ import org.junit.jupiter.api.Test;
 import com.atv1.app.lib.*;
 
 public class PilhaTests {
-  
+
 
   @Test
   void Pilha_should_be_a_TADPilha() {
     Pilha pilha = new Pilha(0);
     assertInstanceOf(TADPilha.class, pilha);
-  } 
-  
+  }
+
   @Test
   void push_should_item_in_first_position_in_Pilha(){
     Pilha pilha = new Pilha(10);
@@ -60,6 +60,22 @@ public class PilhaTests {
 
     assertEquals(2, pilha.pop());
     assertEquals(5, pilha.peek());
+  }
+
+  @Test
+  void toString_should_print_correct_order(){
+    Pilha pilha = new Pilha(10);
+
+    pilha.push(1);
+    pilha.push(2);
+    pilha.push(3);
+    pilha.push(4);
+
+    assertEquals("4->3->2->1", pilha.toString());
+    assertEquals(4, pilha.pop());
+
+    assertEquals("3->2->1", pilha.toString());
+    assertEquals(3, pilha.peek());
   }
 
 }
