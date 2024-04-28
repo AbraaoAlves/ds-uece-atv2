@@ -1,11 +1,11 @@
-package com.atv1.app;
+package com.atv2.app;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 
 import org.junit.jupiter.api.Test;
 
-import com.atv1.app.lib.*;
+import com.atv2.app.lib.*;
 
 public class PilhaTests {
 
