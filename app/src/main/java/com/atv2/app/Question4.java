@@ -9,7 +9,7 @@ import com.atv2.app.lib.Pilha;
  */
 public class Question4 {
   public static void main(String[] args) {
-    Pilha pilha = new Pilha(10);
+    Pilha<Integer> pilha = new Pilha<Integer>(10);
     Fila fila = new Fila(10);
     
     for (int i = 0; i < 10; i++) {
@@ -23,7 +23,7 @@ public class Question4 {
     while (!fila.isEmpty()) {
       pilha.push(fila.dequeue());
     }
-    
+
     System.out.println("Pilha: " + pilha.toString());
     System.out.println("Fila: " + fila.toString());
   }

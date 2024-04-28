@@ -12,13 +12,13 @@ public class PilhaTests {
 
   @Test
   void Pilha_should_be_a_TADPilha() {
-    Pilha pilha = new Pilha(0);
+    Pilha<Integer> pilha = new Pilha<Integer>(0);
     assertInstanceOf(TADPilha.class, pilha);
   }
 
   @Test
   void push_should_item_in_first_position_in_Pilha(){
-    Pilha pilha = new Pilha(10);
+    Pilha<Integer> pilha = new Pilha<Integer>(10);
     pilha.push(1);
     pilha.push(2);
 
@@ -32,7 +32,7 @@ public class PilhaTests {
 
   @Test
   void total_should_return_quantity_of_itens_in_Pilha(){
-    Pilha pilha = new Pilha(10);
+    Pilha<Integer> pilha = new Pilha<Integer>(10);
 
     pilha.push(1);
     pilha.push(2);
@@ -49,7 +49,7 @@ public class PilhaTests {
 
   @Test
   void pop_should_remove_first_item_from_Pilha_and_return_removed_item(){
-    Pilha pilha = new Pilha(10);
+    Pilha<Integer> pilha = new Pilha<Integer>(10);
 
     pilha.push(1);
     pilha.push(2);
@@ -64,7 +64,7 @@ public class PilhaTests {
 
   @Test
   void toString_should_print_correct_order(){
-    Pilha pilha = new Pilha(10);
+    Pilha<Integer> pilha = new Pilha<Integer>(10);
 
     pilha.push(1);
     pilha.push(2);

@@ -1,17 +1,17 @@
 package com.atv2.app.lib;
 
-public class Pilha implements TADPilha {
+public class Pilha<T> implements TADPilha<T> {
 
   private int size;
   private int top = -1;
-  private No no;
+  private No<T> no;
 
   public Pilha(int size) {
     this.size = size;
     this.no = null;
   }
 
-  public void push(int num) {
+  public void push(T num) {
     if (isFull()) {
       System.out.println("Stack Overflow");
     } else {
@@ -25,8 +25,8 @@ public class Pilha implements TADPilha {
     }
   }
 
-  public int pop() {
-    int result = peek();
+  public T pop() {
+    T result = peek();
     no.remove(--top);
 
     return result;
@@ -34,10 +34,10 @@ public class Pilha implements TADPilha {
   /**
    * get first position item
    */
-  public int peek() {
+  public T peek() {
     if (isEmpty()) {
       System.out.println("Stack Underflow");
-      return -1;
+      return null;
     } else {
       return no.get(top);
     }

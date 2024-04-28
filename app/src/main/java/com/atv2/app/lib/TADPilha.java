@@ -1,13 +1,13 @@
 package com.atv2.app.lib;
 
-public interface TADPilha {
+public interface TADPilha<T> {
     
   // Adds an element to the end of the stack.
-  void push(int num); 
+  void push(T num); 
   // Removes the topmost element from the stack.
-  int pop(); 
+  T pop(); 
   // Retrieves the topmost element without removing it.
-  int peek();
+  T peek();
 
   // Checks if the stack is empty.
   boolean isEmpty();

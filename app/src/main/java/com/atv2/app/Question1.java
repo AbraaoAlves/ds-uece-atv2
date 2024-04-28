@@ -12,7 +12,7 @@ import com.atv2.app.lib.*;
  */
 public class Question1 {
     public static void main(String[] args) {
-      TADPilha P = new Pilha(10);
+      TADPilha<Integer> P = new Pilha<Integer>(10);
       
       for(int i=0; i< 10;i++){
         int val = (int) (Math.random()* 100)+1;
@@ -21,7 +21,7 @@ public class Question1 {
 
       System.out.println("Pilha normal: " + P.toString());
 
-      TADPilha Q = new Pilha(10);
+      TADPilha<Integer> Q = new Pilha<Integer>(10);
       while(!P.isEmpty()){
         Q.push(P.pop());
       }

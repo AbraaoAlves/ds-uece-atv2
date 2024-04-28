@@ -1,7 +1,7 @@
 package com.atv2.app.lib;
 
 public class Fila implements TADFila {
-  No no;
+  No<Integer> no;
   int size;
 
   public Fila(int n) {

@@ -14,7 +14,7 @@ import com.atv2.app.lib.*;
 public class Question3 {
   public static void main(String[] args) {
     TADFila fila = new Fila(12);
-    TADPilha pilha = new Pilha(12);
+    TADPilha<Integer> pilha = new Pilha<Integer>(12);
 
     int[] data = {50, 34, 88, 37, 87, 52, 81, 10, 43, 77, 18, 47};    
 
