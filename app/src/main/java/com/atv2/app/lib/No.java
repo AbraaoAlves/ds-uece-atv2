@@ -1,21 +1,21 @@
 package com.atv2.app.lib;
 
-public class No {
-  public No proximo = null;
-  private Integer atual;
+public class No<T> {
+  public No<T> proximo = null;
+  private T atual;
   
   public No(){
     this.proximo = null;
     this.atual = null;
   }
 
-  public int getAtual(){
-    return (int) this.atual;
+  public T getAtual(){
+    return this.atual;
   }
 
   public int size(){
     int result = atual == null ? 0:1;
-    No aux = this;
+    No<T> aux = this;
     while (aux.proximo != null) {
       aux = aux.proximo;
       result++;
@@ -23,25 +23,25 @@ public class No {
     return result;
   }
 
-  public void set(int position, int value){
-    No aux = this;
+  public void set(int position, T value){
+    No<T> aux = this;
     for (int i = 0; i < position; i++) {      
       aux = aux.proximo;
     }
     aux.atual = value;
   }
 
-  public void add(int value){
-    No aux = this;
+  public void add(T value){
+    No<T> aux = this;
     while (aux.proximo != null) {
       aux = aux.proximo;
     }
-    aux.proximo = new No();
+    aux.proximo = new No<T>();
     aux.proximo.atual = value;
   }
 
-  public int get(int position){
-    No aux = this;
+  public T get(int position){
+    No<T> aux = this;
     for (int i = 0; i < position; i++) {
       aux = aux.proximo;
     }
@@ -49,7 +49,7 @@ public class No {
   }
 
   public void remove(int position){
-    No aux = this;
+    No<T> aux = this;
     for (int i = 0; i < position; i++) {
       aux = aux.proximo;
     }
